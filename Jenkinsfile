@@ -1,27 +1,33 @@
 pipeline {
     agent {
-    node {
-        label 'Agent-1'
-    } 
+        node {
+            label 'Agent-1'
+        }
+    }
 
     stages {
-        stage('build'){
-            steps{
-                echo "building"
-            }
-        
-        }
-        stage('test'){
-            steps{
-                echo "testing"
+        stage('Build') {
+            steps {
+                echo 'Building'
             }
         }
-        stage('deploy'){
-            steps{
-                echo "deploying"
-            }
-        }  
 
-        
+        stage('Test') {
+            steps {
+                echo 'Testing'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying'
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'I always say hello again'
+        }
     }
 }
