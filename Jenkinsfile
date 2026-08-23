@@ -21,7 +21,8 @@ pipeline {
                 echo "deploying"
             }
         }  
-
-        
+    
     }
+
 }
+// Nidadavolu Krishna Mohan DevSecOps Engineer
